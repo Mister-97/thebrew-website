@@ -11,12 +11,12 @@ export default function Footer() {
             <p className="label mt-3 text-cream/60">{site.tagline}</p>
 
             <div className="mt-6 space-y-1 text-sm text-cream/70">
-              <a href={site.phoneHref} className="block hover:text-orange">
+              <a href={site.phoneHref} className="block py-2.5 hover:text-orange">
                 {site.phone}
               </a>
               <a
                 href={`mailto:${site.email}`}
-                className="block hover:text-orange"
+                className="block py-2.5 hover:text-orange"
               >
                 {site.email}
               </a>
@@ -33,24 +33,24 @@ export default function Footer() {
                 type="email"
                 required
                 placeholder="Enter email"
-                className="min-w-0 flex-1 rounded-full border-2 border-cream/25 bg-transparent px-4 py-2.5 text-sm placeholder:text-cream/40 focus:border-orange focus:outline-none"
+                className="min-w-0 flex-1 rounded-full border-2 border-cream/25 bg-transparent px-4 py-2.5 text-base placeholder:text-cream/40 focus:border-orange focus:outline-none"
               />
               <button
                 type="submit"
-                className="label shrink-0 rounded-full bg-orange px-5 py-2.5 text-cream"
+                className="label shrink-0 rounded-full bg-orange px-5 py-3 text-cream"
               >
                 Submit
               </button>
             </form>
 
-            <div className="label mt-6 flex gap-5 text-cream/60">
+            <div className="label mt-4 flex gap-3 text-cream/60">
               {site.socials.map((s) => (
                 <a
                   key={s.label}
                   href={s.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="hover:text-orange"
+                  className="inline-block px-2 py-3 hover:text-orange"
                 >
                   {s.label}
                 </a>

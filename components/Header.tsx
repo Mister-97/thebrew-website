@@ -7,17 +7,17 @@ import Image from "next/image";
 import { site } from "@/content/site";
 
 const links = [
+  { label: "Home", href: "/" },
   { label: "Menu", href: "/menu" },
-  { label: "Coffee", href: "/#story" },
+  { label: "Members", href: "/#subscribe" },
   { label: "Podcast", href: "/podcast" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact" },
   { label: "Careers", href: "/careers" },
 ];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  // Circle the link for the page we are on. The homepage keeps the circle on
-  // Menu, as it always had.
+  // Circle the link for the page we are on (Home on the homepage).
   const pathname = usePathname();
   const activeHref =
     links.find((l) => l.href === pathname)?.href ?? links[0].href;
@@ -106,8 +106,8 @@ export default function Header() {
 
         <div data-intro-fade className="flex items-center gap-3">
           <a
-            href={site.ordering.enabled ? site.ordering.href : "#contact"}
-            className={`label rounded-full bg-orange px-5 py-2.5 text-cream transition-all hover:-translate-y-0.5 ${dark ? "hover:bg-cream hover:text-ink" : "hover:bg-ink"}`}
+            href={site.ordering.enabled ? site.ordering.href : "/contact"}
+            className={`label rounded-full bg-orange px-5 py-3 text-cream sm:py-2.5 transition-all hover:-translate-y-0.5 ${dark ? "hover:bg-cream hover:text-ink" : "hover:bg-ink"}`}
           >
             {site.ordering.enabled ? "Order now" : "Find us"}
           </a>
@@ -117,7 +117,7 @@ export default function Header() {
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-label="Toggle menu"
-            className="flex h-9 w-9 shrink-0 flex-col items-center justify-center gap-1.5 md:hidden"
+            className="flex h-11 w-11 shrink-0 flex-col items-center justify-center gap-1.5 md:hidden"
           >
             <span
               className={`h-0.5 w-6 ${bar} transition-transform ${open ? "translate-y-2 rotate-45" : ""}`}

@@ -186,3 +186,54 @@ export const gallery = [
   { src: "/images/gallery-storefront.webp", alt: "The Brew's storefront on E 71st St" },
   { src: "/images/gallery-menu-board.webp", alt: "Menu board behind the counter" },
 ] as const;
+
+/**
+ * Machine-readable version of site.hours, used for the live "Open now" badge.
+ * Days are 0 = Sunday to 6 = Saturday, hours are 24h in Chicago time.
+ * Keep in step with site.hours.
+ */
+export const hoursSchedule = [
+  { days: [1, 2, 3, 4, 5], open: 7, close: 15 },
+  { days: [0, 6], open: 9, close: 15 },
+] as const;
+
+/**
+ * Open roles on /careers. DRAFT copy: the duties are typical for each role and
+ * need the owner's review. No pay, hours or requirements are stated because
+ * none were provided.
+ */
+export const jobs = [
+  {
+    slug: "barista",
+    title: "Barista",
+    blurb: "Pull the shots, steam the milk, and be the face people see first.",
+    duties: [
+      "Make espresso drinks, cold brew, teas and smoothies to our recipes",
+      "Take orders, run the register and keep the line moving",
+      "Keep the bar, floor and restrooms clean and stocked",
+      "Know the menu well enough to help guests choose",
+    ],
+  },
+  {
+    slug: "manager",
+    title: "Manager",
+    blurb: "Run the floor, lead the team and keep every shift on track.",
+    duties: [
+      "Lead shifts and coach baristas on the floor",
+      "Open and close the shop, count the drawer and handle deposits",
+      "Check inventory and place daily orders",
+      "Handle guest concerns and keep quality high",
+    ],
+  },
+  {
+    slug: "general-manager",
+    title: "General Manager",
+    blurb: "Own the shop: the team, the numbers and the neighborhood.",
+    duties: [
+      "Hire, train, schedule and develop the whole team",
+      "Own the budget, labor, ordering and vendor relationships",
+      "Keep the shop clean, safe and up to health code",
+      "Work with the owner on events, the podcast and growth",
+    ],
+  },
+] as const;
