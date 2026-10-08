@@ -109,10 +109,10 @@ export default function Header() {
 
         <div data-intro-fade className="flex items-center gap-3">
           <a
-            href={site.ordering.enabled ? site.ordering.href : "/contact"}
+            href="/members"
             className={`label whitespace-nowrap rounded-full bg-orange px-4 py-3 text-cream min-[360px]:px-5 sm:py-2.5 transition-all hover:-translate-y-0.5 ${dark ? "hover:bg-cream hover:text-ink" : "hover:bg-ink"}`}
           >
-            {site.ordering.enabled ? "Order now" : "Find us"}
+            Rewards
           </a>
 
           <button

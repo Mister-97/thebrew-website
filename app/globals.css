@@ -168,3 +168,13 @@ html.podcast-dark body { background-color: var(--color-ink); }
 @media (prefers-reduced-motion: reduce) {
   .perk .perk-bell, .perk .perk-cup, .perk .perk-ripple { animation: none !important; }
 }
+
+/* Slow bob for the Iced Coffee garnish (components/MenuPreview.tsx). Uses the
+   individual `translate` property so each piece keeps its own rotate. */
+@keyframes garnish-drift {
+  from { translate: 0 0; }
+  to { translate: 3px -9px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  [style*="garnish-drift"] { animation: none !important; }
+}

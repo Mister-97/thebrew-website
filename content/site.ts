@@ -85,34 +85,6 @@ export const site = {
   },
 } as const;
 
-/**
- * "Signature" three-card section, mirroring the reference's Banh Mi / Café /
- * Vietnam Street Food trio: one card per category, short tag list, one photo.
- */
-export const features = [
-  {
-    eyebrow: "Dubai Chocolate",
-    tags: ["Gourmet medium roast", "Whole bean"],
-    body: "A gourmet medium roast finished with rich Dubai chocolate notes.",
-    image: "/images/coffee-dubai.png",
-    alt: "A bag of Dubai Chocolate gourmet medium roast coffee",
-  },
-  {
-    eyebrow: "Peruvian",
-    tags: ["Single origin", "Drip ground"],
-    body: "Single-origin Peruvian beans, gourmet medium roast, drip ground.",
-    image: "/images/coffee-peru.png",
-    alt: "A bag of Peruvian single origin gourmet medium roast coffee",
-  },
-  {
-    eyebrow: "Kopi Safari",
-    tags: ["Gourmet medium roast", "Whole bean"],
-    body: "Our Kopi Safari blend, a gourmet medium roast whole bean coffee.",
-    image: "/images/coffee-kopi.png",
-    alt: "A bag of Kopi Safari gourmet medium roast coffee",
-  },
-] as const;
-
 // PLACEHOLDER — all items and prices are invented. Replace with the real board.
 export const menuPreview = [
   { name: "Filter", note: "Rotating single origin", price: "4.00" },

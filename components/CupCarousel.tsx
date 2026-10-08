@@ -6,22 +6,25 @@ import gsap from "gsap";
 
 export const CUPS = [
   {
-    src: "/images/cup-dubai-chocolate.png",
-    alt: "Dubai Chocolate",
+    src: "/images/menu/berry-blast-smoothie.png",
+    alt: "Berry Blast smoothie with The Brew logo",
+    word: "Smoothie",
     centerBoost: 1,
-    accent: "#c22a1f",
+    accent: "#9b2c5b",
   },
   {
-    src: "/images/cup-iced.png",
-    alt: "Iced Coffee",
+    src: "/images/menu/iced-mocha.png",
+    alt: "Iced Mocha with The Brew logo",
+    word: "Iced Coffee",
     centerBoost: 1.15,
     accent: "#e84b17",
   },
   {
-    src: "/images/cup-hot.png",
-    alt: "Classic Brew",
-    centerBoost: 1.2,
-    accent: "#603913",
+    src: "/images/menu/hot-coffee-cup-v2.png",
+    alt: "Hot black coffee in a paper cup with The Brew logo",
+    word: "Coffee",
+    centerBoost: 1.15,
+    accent: "#8a3a1a",
   },
 ];
 const cups = CUPS;
@@ -44,7 +47,7 @@ function slots(offset: number, isMobile: boolean): Slot[] {
 export default function CupCarousel({
   onActiveChange,
 }: {
-  onActiveChange?: (accent: string) => void;
+  onActiveChange?: (accent: string, word: string) => void;
 }) {
   const cupRefs = useRef<Array<HTMLDivElement | null>>([]);
 
@@ -58,7 +61,7 @@ export default function CupCarousel({
 
     const announceActive = () => {
       const centerCup = cups[(1 - tick + cups.length) % cups.length];
-      onActiveChange?.(centerCup.accent);
+      onActiveChange?.(centerCup.accent, centerCup.word);
     };
 
     // Cup i sits in slot (i + tick) % 3 — advancing tick rotates them all.

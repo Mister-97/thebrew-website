@@ -52,10 +52,10 @@ export default function Welcome() {
               View menu
             </a>
             <a
-              href={site.ordering.enabled ? site.ordering.href : "#contact"}
+              href="/members"
               className="label rounded-full bg-orange px-7 py-3.5 text-cream transition-transform hover:-translate-y-0.5"
             >
-              {site.ordering.enabled ? "Order now" : "Find us"}
+              Rewards
             </a>
           </div>
         </div>

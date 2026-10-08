@@ -26,7 +26,8 @@ export default function Menu() {
               <span className="font-semibold text-orange-deep">
                 {valueDuet.name}, ${valueDuet.price}.
               </span>{" "}
-              Lunch special, {valueDuet.hours}. {valueDuet.trigger} {valueDuet.fine}
+              Lunch special, {valueDuet.hours}. Order any sandwich with a <br className="hidden sm:block" />
+              <span className="whitespace-nowrap">soup, or</span> any sandwich with a pastry or snack. {valueDuet.fine}
             </p>
 
             <ul className="mt-10 flex flex-wrap justify-center gap-x-4 gap-y-10 sm:mt-16 sm:gap-x-8 sm:gap-y-14">

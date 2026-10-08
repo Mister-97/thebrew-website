@@ -4,7 +4,7 @@ import CityFeature from "@/components/CityFeature";
 import Signature from "@/components/Signature";
 import MenuPreview from "@/components/MenuPreview";
 import Welcome from "@/components/Welcome";
-import Podcast from "@/components/Podcast";
+import HomeMembers from "@/components/HomeMembers";
 import PatternBanner from "@/components/PatternBanner";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -22,7 +22,7 @@ export default function Home() {
         <Signature />
         <Welcome />
         <PatternBanner />
-        <Podcast />
+        <HomeMembers />
         <Contact />
       </main>
       <Footer />
