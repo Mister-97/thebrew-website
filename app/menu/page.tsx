@@ -4,7 +4,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollFX from "@/components/ScrollFX";
-import { menuCategories } from "@/content/menu";
+import { menuCategories, valueDuet } from "@/content/menu";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
@@ -22,8 +22,11 @@ export default function Menu() {
             <h1 className="font-display text-center text-[clamp(2.4rem,9vw,4.75rem)] leading-[0.9] tracking-[0.01em] sm:text-left">
               Check out our menu
             </h1>
-            <p className="mt-5 hidden max-w-xl text-lg text-ink/70 sm:block">
-              Pick a category to see everything on it.
+            <p className="mx-auto mt-4 max-w-2xl text-center text-sm leading-snug text-ink/70 sm:mx-0 sm:text-left sm:text-base">
+              <span className="font-semibold text-orange-deep">
+                {valueDuet.name}, ${valueDuet.price}.
+              </span>{" "}
+              Lunch special, {valueDuet.hours}. {valueDuet.trigger} {valueDuet.fine}
             </p>
 
             <ul className="mt-10 flex flex-wrap justify-center gap-x-4 gap-y-10 sm:mt-16 sm:gap-x-8 sm:gap-y-14">

@@ -132,7 +132,7 @@ export const menuCategories: MenuCategory[] = [
     name: "Paninis Plus",
     image: "/images/menu/category-paninis.png",
     alt: "Three grilled panini sandwiches cut in half",
-    note: "Value Duets, $14. Lunch special, 10:30am to 4pm. Any sandwich and a soup, or any sandwich and a pastry or snack. May not be substituted with other items.",
+    note: "Value Duet, $14, from 10:30am to 4pm. Any sandwich with a soup, or any sandwich with a pastry or snack. Items may not be substituted.",
     items: [
       { name: "Caprese", price: "10", image: "/images/menu/caprese-panini.png" },
       { name: "Turkey & Swiss", price: "11" },
@@ -160,7 +160,7 @@ export const menuCategories: MenuCategory[] = [
     name: "Soups",
     image: "/images/menu/category-soups.png",
     alt: "Three bowls of soup: tomato basil, lentil and chicken noodle",
-    note: "Pair any soup with a sandwich in a Value Duet, $14.",
+    note: "Pair any soup with a sandwich in a Value Duet, $14, from 10:30am to 4pm.",
     items: [
       { name: "Lentil", price: "6" },
       { name: "Tomato Basil", price: "5" },
@@ -170,3 +170,12 @@ export const menuCategories: MenuCategory[] = [
     ],
   },
 ];
+
+/** The lunch deal, shown under the heading on /menu. From the printed board. */
+export const valueDuet = {
+  name: "Value Duet",
+  price: "14",
+  hours: "10:30am to 4pm",
+  trigger: "Order any sandwich with a soup, or any sandwich with a pastry or snack.",
+  fine: "Items may not be substituted.",
+};

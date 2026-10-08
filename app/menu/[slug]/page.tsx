@@ -27,8 +27,12 @@ export default async function CategoryPage(props: PageProps<"/menu/[slug]">) {
   const idx = menuCategories.findIndex((x) => x.slug === slug);
   if (idx < 0) notFound();
   const c = menuCategories[idx];
-  const next = menuCategories[(idx + 1) % menuCategories.length];
-  const featured = c.items.filter((i) => i.image);
+  const n = menuCategories.length;
+  const next = menuCategories[(idx + 1) % n];
+  const prev = menuCategories[(idx - 1 + n) % n];
+  // Item photos show only when every item in the category has one, so a page
+  // never shows one lonely photo. Items keep their `image` for when the set is complete.
+  const featured = c.items.every((i) => i.image) ? c.items : [];
   const list = c.items;
 
   return (
@@ -81,10 +85,34 @@ export default async function CategoryPage(props: PageProps<"/menu/[slug]">) {
 
             {c.note && <p className="mt-6 max-w-2xl text-base text-ink/65">{c.note}</p>}
 
-            <Link href={`/menu/${next.slug}`} className="group mt-14 flex items-center justify-between gap-6 border-t-2 border-ink pt-6 sm:mt-20">
-              <span className="text-ink/60">Next</span>
-              <span className="font-display text-3xl transition-colors group-hover:text-orange-deep sm:text-4xl">{next.name}</span>
-            </Link>
+            <nav aria-label="More categories" className="mt-16 grid gap-4 border-t-2 border-ink pt-8 sm:mt-24 sm:grid-cols-2 sm:gap-6">
+              {[
+                { c: prev, label: "Previous", flip: false },
+                { c: next, label: "Next", flip: true },
+              ].map(({ c: t, label, flip }) => (
+                <Link
+                  key={label}
+                  href={`/menu/${t.slug}`}
+                  className={`group flex items-center gap-4 rounded-slab bg-tan/60 p-4 transition-colors hover:bg-tan sm:gap-6 sm:p-6 ${flip ? "flex-row-reverse text-right" : ""}`}
+                >
+                  <span className="relative block aspect-4/3 w-28 shrink-0 sm:w-40">
+                    <Image
+                      src={t.image}
+                      alt=""
+                      fill
+                      sizes="(max-width: 640px) 7rem, 10rem"
+                      className="object-contain drop-shadow-md transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </span>
+                  <span className="min-w-0 flex-1">
+                    <span className="block text-base text-ink/60">{flip ? `${label} \u2192` : `\u2190 ${label}`}</span>
+                    <span className="font-display mt-1 block text-2xl leading-tight transition-colors group-hover:text-orange-deep sm:text-3xl">
+                      {t.name}
+                    </span>
+                  </span>
+                </Link>
+              ))}
+            </nav>
           </div>
         </section>
       </main>
