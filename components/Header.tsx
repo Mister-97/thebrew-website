@@ -20,7 +20,10 @@ export default function Header() {
   // Circle the link for the page we are on (Home on the homepage).
   const pathname = usePathname();
   const activeHref =
-    links.find((l) => l.href === pathname)?.href ?? links[0].href;
+    links.find((l) => l.href === pathname)?.href ??
+    // Sub-pages such as /menu/hot-coffee keep their section circled.
+    links.find((l) => l.href !== "/" && !l.href.includes("#") && pathname.startsWith(l.href + "/"))?.href ??
+    links[0].href;
   // The podcast page runs dark: header matches the page, text goes white.
   const dark = pathname === "/podcast";
   const accent = dark ? "text-orange" : "text-orange-deep";

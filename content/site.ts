@@ -125,59 +125,6 @@ export const menuPreview = [
   { name: "Cinnamon Morning Bun", note: "While they last", price: "5.25" },
 ] as const;
 
-/**
- * The full menu — one tile per category, a trio of drinks shown together,
- * name below. Swap `image` for real drink photography per category before
- * launch; these point at existing placeholder art in the meantime.
- */
-export const menuCategories = [
-  {
-    slug: "featured",
-    name: "Featured Drinks",
-    image: "/images/cup-hot.png",
-    items: ["Brown Sugar Latte", "Salted Caramel Cortado", "Honey Cinnamon Cold Brew"],
-  },
-  {
-    slug: "espresso",
-    name: "Espresso Classics",
-    image: "/images/cup-hot.png",
-    items: ["Cortado", "Flat White", "Cappuccino", "Americano"],
-  },
-  {
-    slug: "cold-brew",
-    name: "Cold Brew & Iced Coffee",
-    image: "/images/cup-iced.png",
-    items: ["Cold Brew", "Iced Latte", "Iced Mocha", "Nitro"],
-  },
-  {
-    slug: "specialty",
-    name: "Specialty Coffee",
-    image: "/images/coffee-dubai.png",
-    items: ["Dubai Chocolate", "Peruvian", "Kopi Safari"],
-  },
-  {
-    slug: "teas",
-    name: "Teas & Chai",
-    image: "/images/cup-iced.png",
-    items: ["Chai Latte", "Matcha Latte", "London Fog"],
-  },
-  {
-    slug: "pastries",
-    name: "Bakery",
-    image: "/images/cup-dubai-chocolate.png",
-    items: ["Butter Croissant", "Egg & Cheddar Roll", "Cinnamon Morning Bun"],
-  },
-] as const;
-
-export const menuCustomize = [
-  { label: "Extra shot", note: "" },
-  { label: "Flavor", note: "add one or a few" },
-  { label: "Sweetness", note: "1/4, 1/2, regular, extra" },
-  { label: "Milk", note: "oat, coconut or almond" },
-  { label: "Topping", note: "whipped cream or cold foam" },
-  { label: "Drizzle", note: "chocolate or caramel" },
-] as const;
-
 export const gallery = [
   { src: "/images/gallery-lounge.webp", alt: "The Brew's lounge seating against the orange logo wall" },
   { src: "/images/gallery-pour.webp", alt: "Espresso dripping into a cup" },
