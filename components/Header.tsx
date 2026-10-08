@@ -9,7 +9,7 @@ import { site } from "@/content/site";
 const links = [
   { label: "Home", href: "/" },
   { label: "Menu", href: "/menu" },
-  { label: "Members", href: "/#subscribe" },
+  { label: "Members", href: "/members" },
   { label: "Podcast", href: "/podcast" },
   { label: "Contact", href: "/contact" },
   { label: "Careers", href: "/careers" },
@@ -34,7 +34,7 @@ export default function Header() {
       <div className="relative z-10 mx-auto flex h-14 max-w-6xl items-center justify-between px-5 sm:h-16 sm:px-8">
         <Link
           href="/"
-          className="relative z-10 flex items-center gap-0.5 font-display text-2xl sm:text-[1.6rem]"
+          className="relative z-10 flex items-center gap-0.5 whitespace-nowrap font-display text-xl min-[360px]:text-2xl sm:text-[1.6rem]"
         >
           {dark ? (
             <span
@@ -107,7 +107,7 @@ export default function Header() {
         <div data-intro-fade className="flex items-center gap-3">
           <a
             href={site.ordering.enabled ? site.ordering.href : "/contact"}
-            className={`label rounded-full bg-orange px-5 py-3 text-cream sm:py-2.5 transition-all hover:-translate-y-0.5 ${dark ? "hover:bg-cream hover:text-ink" : "hover:bg-ink"}`}
+            className={`label whitespace-nowrap rounded-full bg-orange px-4 py-3 text-cream min-[360px]:px-5 sm:py-2.5 transition-all hover:-translate-y-0.5 ${dark ? "hover:bg-cream hover:text-ink" : "hover:bg-ink"}`}
           >
             {site.ordering.enabled ? "Order now" : "Find us"}
           </a>

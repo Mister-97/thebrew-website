@@ -71,6 +71,7 @@ export async function POST(request: Request) {
     management: clean(body.management, 2000),
     desiredPay: clean(body.desiredPay, 80),
     referral: clean(body.referral, 80),
+    consent: clean(body.consent, 10),
     references: clean(body.references, 1000),
     resumeName: resume?.name ?? "",
     submittedAt: new Date().toISOString(),
@@ -81,7 +82,8 @@ export async function POST(request: Request) {
   const missing =
     !entry.name ||
     !/^\S+@\S+\.\S+$/.test(entry.email) ||
-    (!isCareers && !entry.message) ||
+    (!isCareers && entry.source !== "members" && !entry.message) ||
+    (entry.source === "members" && !entry.consent) ||
     (entry.source === "podcast-guest" && !entry.achievements) ||
     (isCareers &&
       (!entry.role ||

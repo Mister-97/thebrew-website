@@ -18,7 +18,7 @@ export default function Careers() {
       <main>
         <section className="bg-cream text-ink">
           <div className="mx-auto max-w-6xl px-5 pb-20 pt-14 sm:px-8 sm:pb-28 sm:pt-24">
-            <ContactHeading text="We’re hiring" size="md" />
+            <ContactHeading text="We’re hiring" size="md" animate={false} />
             <p className="mt-5 max-w-xl text-lg text-ink/70">
               Three open roles at the shop on {site.address.line1}. Pick one to
               see what the job involves, then apply.

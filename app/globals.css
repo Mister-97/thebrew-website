@@ -145,3 +145,26 @@ html.podcast-dark body { background-color: var(--color-ink); }
 @media (prefers-reduced-motion: reduce) {
   .nudge { animation: none; }
 }
+
+/* Member perk icons come alive on hover or focus (app/members/page.tsx). */
+@keyframes ring {
+  0%, 100% { transform: rotate(0); }
+  20% { transform: rotate(14deg); }
+  40% { transform: rotate(-12deg); }
+  60% { transform: rotate(8deg); }
+  80% { transform: rotate(-5deg); }
+}
+@keyframes steam {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+@keyframes ripple {
+  0% { transform: scale(0.8); opacity: 0.55; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+.perk:hover .perk-bell, .perk:focus-within .perk-bell { animation: ring 0.9s ease-in-out; transform-origin: 50% 20%; }
+.perk:hover .perk-cup, .perk:focus-within .perk-cup { animation: steam 0.8s ease-in-out infinite; }
+.perk:hover .perk-ripple, .perk:focus-within .perk-ripple { animation: ripple 1.2s ease-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .perk .perk-bell, .perk .perk-cup, .perk .perk-ripple { animation: none !important; }
+}

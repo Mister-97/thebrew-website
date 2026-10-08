@@ -28,7 +28,7 @@ export default function ContactPage() {
       <main>
         <section className="bg-cream text-ink">
           <div className="mx-auto max-w-6xl px-5 pb-20 pt-14 sm:px-8 sm:pb-28 sm:pt-24">
-            <ContactHeading text="Let’s talk" />
+            <ContactHeading text="Let’s talk" animate={false} />
 
             <div className="mt-14 grid gap-14 border-t-2 border-ink pt-10 sm:mt-20 sm:pt-12 lg:grid-cols-12 lg:gap-20">
               <div className="space-y-10 lg:col-span-4">

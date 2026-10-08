@@ -237,3 +237,18 @@ export const jobs = [
     ],
   },
 ] as const;
+
+/**
+ * Rewards club on /members. DRAFT: the perks and the punch count are
+ * placeholders for the owner to confirm. Nothing here has been promised to
+ * customers yet.
+ */
+export const membership = {
+  name: "The Brew Club",
+  punches: 10,
+  perks: [
+    { title: "Every tenth drink is free", body: "Every drink you buy earns a stamp. Fill the card and the next one is on us." },
+    { title: "First to know", body: "New roasts, seasonal drinks and specials land in your inbox before anyone else." },
+    { title: "Come to the tapings", body: "Members get first word on live podcast tapings and events at the shop." },
+  ],
+} as const;
