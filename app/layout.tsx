@@ -29,12 +29,29 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://the-brew-nine.vercel.app"),
   title: `${site.name} | Coffee, all day in ${site.city}`,
   description: site.description,
   openGraph: {
     title: `${site.name} | Coffee, all day in ${site.city}`,
     description: site.description,
     type: "website",
+    // The share card: the iced latte with the logo on the cup. Set explicitly so
+    // link previews never fall back to whichever image they find on the page.
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: `${site.name} iced latte with the logo on the cup`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} | Coffee, all day in ${site.city}`,
+    description: site.description,
+    images: ["/og-image.jpg"],
   },
 };
 
