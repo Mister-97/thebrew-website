@@ -64,7 +64,7 @@ export default function CupCarousel({
       onActiveChange?.(centerCup.accent, centerCup.word);
     };
 
-    // Cup i sits in slot (i + tick) % 3 — advancing tick rotates them all.
+    // Cup i sits in slot (i + tick) % 3, advancing tick rotates them all.
     const place = (animate: boolean) => {
       const isMobile = window.innerWidth < 640;
       const table = slots(offsetFor(), isMobile);

@@ -43,7 +43,7 @@ const perkIcons = [
 ];
 
 export const metadata: Metadata = {
-  title: `Members — ${site.name}`,
+  title: `Members | ${site.name}`,
   description: `Join ${membership.name}: earn a stamp with every drink and get your tenth free at ${site.name}.`,
 };
 

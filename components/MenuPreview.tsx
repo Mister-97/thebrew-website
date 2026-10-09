@@ -130,7 +130,7 @@ export default function MenuPreview() {
           <Garnish bits={BERRIES} src="/images/blueberry.png" on={smoothie} layer="back" />
           <Garnish bits={ICED} on={word === "Iced Coffee"} layer="back" />
 
-          {/* 3. the cups — rotating carousel, each takes a turn centre stage */}
+          {/* 3. the cups, rotating carousel, each takes a turn centre stage */}
           <CupCarousel onActiveChange={onActive} />
 
           {/* 4. garnish in front of the cups */}
@@ -139,7 +139,7 @@ export default function MenuPreview() {
           <Garnish bits={ICED} on={word === "Iced Coffee"} layer="front" />
         </div>
 
-        {/* 5. full-bleed card on top — its arc cuts off the cup bases */}
+        {/* 5. full-bleed card on top, its arc cuts off the cup bases */}
         <div
           className="reveal relative z-50 -mt-8 w-full bg-cream pt-16 pb-10 sm:-mt-10 sm:pt-20 sm:pb-14"
           style={{

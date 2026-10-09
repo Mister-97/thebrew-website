@@ -17,7 +17,7 @@ export async function generateMetadata(props: PageProps<"/menu/[slug]">): Promis
   const c = menuCategories.find((x) => x.slug === slug);
   if (!c) return {};
   return {
-    title: `${c.name} — ${site.name}`,
+    title: `${c.name} | ${site.name}`,
     description: `${c.name} at ${site.name}: ${c.items.slice(0, 4).map((i) => i.name).join(", ")} and more.`,
   };
 }

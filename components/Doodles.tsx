@@ -1,6 +1,6 @@
 /**
  * Small original line-art accents, in the spirit of the reference's
- * hand-drawn scribbles (steam, arrows, ingredient sketches) — drawn from
+ * hand-drawn scribbles (steam, arrows, ingredient sketches), drawn from
  * scratch, not traced from their artwork or mascot.
  */
 

@@ -29,10 +29,10 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: `${site.name} — Coffee, all day in ${site.city}`,
+  title: `${site.name} | Coffee, all day in ${site.city}`,
   description: site.description,
   openGraph: {
-    title: `${site.name} — Coffee, all day in ${site.city}`,
+    title: `${site.name} | Coffee, all day in ${site.city}`,
     description: site.description,
     type: "website",
   },

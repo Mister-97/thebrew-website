@@ -2,7 +2,7 @@ import Image from "next/image";
 import { site } from "@/content/site";
 
 // Intro block directly under the ticker: headline + copy on the left,
-// circular photo with a doodle and small badge on the right — mirrors the
+// circular photo with a doodle and small badge on the right, mirrors the
 // reference's "BANH ME the WORLD" section.
 export default function About() {
   return (

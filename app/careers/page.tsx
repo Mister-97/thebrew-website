@@ -7,7 +7,7 @@ import CareersList from "@/components/CareersList";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: `Careers — ${site.name}`,
+  title: `Careers | ${site.name}`,
   description: `Open roles at ${site.name}: barista, manager and general manager in ${site.city}.`,
 };
 

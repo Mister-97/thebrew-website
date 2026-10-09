@@ -1,7 +1,7 @@
 import { site } from "@/content/site";
 
 // Full-bleed feature between the hero and the coffee showcase. The photo
-// is a native CSS fixed background — it stays put while the page scrolls
+// is a native CSS fixed background, it stays put while the page scrolls
 // over it, no JS involved, so there's no scroll-jank to fight.
 export default function CityFeature() {
   return (
@@ -19,10 +19,8 @@ export default function CityFeature() {
           South Shore&rsquo;s
           <br />
           coffee bar
-          <span className="text-orange hidden sm:inline">—</span>
-          <span aria-hidden className="mt-2 block text-orange sm:hidden">
-            —
-          </span>
+          <span aria-hidden className="ml-3 hidden h-[0.14em] w-[0.7em] bg-orange align-middle sm:inline-block" />
+          <span aria-hidden className="mt-3 block h-1 w-8 bg-orange sm:hidden" />
         </h2>
 
         <div className="ml-6 w-56 text-cream sm:ml-12 sm:w-64 lg:ml-20">

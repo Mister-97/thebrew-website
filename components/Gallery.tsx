@@ -8,7 +8,7 @@ import { gallery } from "@/content/site";
 const LOOP = [...gallery, ...gallery];
 
 /**
- * Gallery as a slow, continuous filmstrip — uniform photos drift right to
+ * Gallery as a slow, continuous filmstrip, uniform photos drift right to
  * left on a loop, fading only as they approach the container's edges.
  * Hover pauses the drift so a photo can actually be looked at.
  */

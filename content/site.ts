@@ -1,5 +1,5 @@
 /**
- * THE BREW — single source of truth for site content.
+ * THE BREW, single source of truth for site content.
  *
  * Anything marked PLACEHOLDER is invented and must be replaced with the
  * real value before launch. Search this file for "PLACEHOLDER" to find them all.
@@ -9,13 +9,13 @@
 export const site = {
   name: "The Brew",
   // Stacked collage headline, mirroring the reference's "A FRESH / TASTE /
-  // OF the WORLD" — three lines, one word broken out in script mid-line.
+  // OF the WORLD", three lines, one word broken out in script mid-line.
   heroLines: [
     { text: "A DAILY", script: "" },
     { text: "POUR OF", script: "the" },
     { text: "GOOD STUFF", script: "" },
   ] as { text: string; script: string }[],
-  // PLACEHOLDER — city drives the hero line, the map and all local SEO.
+  // PLACEHOLDER, city drives the hero line, the map and all local SEO.
   city: "Chicago",
   state: "IL",
   tagline: "Coffee, all day.",
@@ -53,13 +53,13 @@ export const site = {
   ],
 
   socials: [
-    // PLACEHOLDER — real handles needed.
+    // PLACEHOLDER, real handles needed.
     { label: "Instagram", href: "https://instagram.com/" },
     { label: "Facebook", href: "https://facebook.com/" },
   ],
 
   /**
-   * PLACEHOLDER — no online ordering platform confirmed yet.
+   * PLACEHOLDER, no online ordering platform confirmed yet.
    * When they sign up for Toast / Square / Clover, drop the ordering URL in
    * `href` and flip `enabled` to true. The header and hero buttons follow.
    */
@@ -85,7 +85,7 @@ export const site = {
   },
 } as const;
 
-// PLACEHOLDER — all items and prices are invented. Replace with the real board.
+// PLACEHOLDER, all items and prices are invented. Replace with the real board.
 export const menuPreview = [
   { name: "Filter", note: "Rotating single origin", price: "4.00" },
   { name: "Flat White", note: "House blend, 6oz", price: "4.75" },

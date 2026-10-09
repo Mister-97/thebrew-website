@@ -8,7 +8,7 @@ import { menuCategories, valueDuet } from "@/content/menu";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: `Menu — ${site.name}`,
+  title: `Menu | ${site.name}`,
   description: `The full menu at ${site.name}, ${site.address.line1}, ${site.city}: coffee, teas, smoothies, signature drinks, meals, paninis and pastries.`,
 };
 

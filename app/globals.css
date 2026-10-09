@@ -30,7 +30,7 @@
   --animate-spin-slow: spin 9s linear infinite;
 }
 
-/* scroll-behavior: smooth is deliberately omitted — it fights GSAP
+/* scroll-behavior: smooth is deliberately omitted, it fights GSAP
    ScrollTrigger's pin/scrub calculations and causes stutter. */
 
 /* clip, not hidden: hidden on both html and body turns body into a scroll

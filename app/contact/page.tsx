@@ -9,7 +9,7 @@ import ContactHeading from "@/components/ContactHeading";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: `Contact — ${site.name}`,
+  title: `Contact | ${site.name}`,
   description: `Visit, call or write to ${site.name} at ${site.address.line1}, ${site.address.line2}.`,
 };
 

@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * Rotating circular text badge — the "moving circle" stamp mechanic from
+ * Rotating circular text badge, the "moving circle" stamp mechanic from
  * the reference, rebuilt with our own text via an SVG textPath spun by CSS.
  */
 export default function CircleEmblem({
