@@ -39,9 +39,9 @@ const CHOC = "/images/chocolate-chunk.png";
 // clusters either side, big sharp pieces up front, small softer ones behind.
 const ICED: Bit[] = [
   // behind the cups: smaller, farther, softer
-  { layer: "back", far: true, drift: 6.5, src: ICE, cls: "top-[5%] left-[31%] h-8 w-8 rotate-[40deg] sm:h-[3.2rem] sm:w-[3.2rem]" },
+  { wideOnly: true, layer: "back", far: true, drift: 6.5, src: ICE, cls: "top-[5%] left-[31%] h-8 w-8 rotate-[40deg] sm:h-[3.2rem] sm:w-[3.2rem]" },
   { layer: "back", far: true, drift: 7.5, src: CHOC, cls: "top-[2%] right-[34%] h-7 w-7 -rotate-[70deg] sm:h-[2.6rem] sm:w-[2.6rem]" },
-  { layer: "back", far: true, drift: 8, src: ICE, cls: "top-[47%] left-[11%] h-9 w-9 rotate-[100deg] sm:h-[3.6rem] sm:w-[3.6rem]" },
+  { wideOnly: true, layer: "back", far: true, drift: 8, src: ICE, cls: "top-[47%] left-[11%] h-9 w-9 rotate-[100deg] sm:h-[3.6rem] sm:w-[3.6rem]" },
   { layer: "back", far: true, drift: 7, src: CHOC, cls: "top-[54%] right-[10%] h-8 w-8 rotate-[25deg] sm:h-[3.2rem] sm:w-[3.2rem]" },
   { layer: "back", wideOnly: true, drift: 6, src: ICE, cls: "top-[11%] right-[12%] h-12 w-12 rotate-[95deg] sm:h-[5.4rem] sm:w-[5.4rem]" },
   // in front of the cups: larger and sharp

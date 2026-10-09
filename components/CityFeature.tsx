@@ -1,17 +1,23 @@
 import { site } from "@/content/site";
 
-// Full-bleed feature between the hero and the coffee showcase. The photo
-// is a native CSS fixed background, it stays put while the page scrolls
-// over it, no JS involved, so there's no scroll-jank to fight.
+// Full-bleed feature between the hero and the coffee showcase. The photo stays
+// put while the page scrolls over it. It uses a position: fixed layer clipped to
+// the section, not background-attachment: fixed, because iPhone Safari does not
+// support that property and blows the image up to a blur.
 export default function CityFeature() {
   return (
     <section
-      className="relative isolate overflow-hidden bg-fixed bg-cover"
-      style={{
-        backgroundImage: "url(/images/feature-interior-v3.webp)",
-        backgroundPosition: "center 40%",
-      }}
+      className="relative isolate"
+      style={{ clipPath: "inset(0)" }}
     >
+      <div
+        aria-hidden
+        className="fixed inset-0 -z-10 bg-cover"
+        style={{
+          backgroundImage: "url(/images/feature-interior-v3.webp)",
+          backgroundPosition: "center 40%",
+        }}
+      />
       <div className="absolute inset-0 bg-ink/55" />
 
       <div className="relative z-10 flex min-h-[70vh] flex-col justify-between gap-16 px-6 pt-14 pb-8 sm:min-h-[85vh] sm:px-24 sm:pt-20 sm:pb-10 lg:px-40">
