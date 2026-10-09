@@ -171,3 +171,18 @@ export const membership = {
     { title: "Come to the tapings", body: "Members get first word on live podcast tapings and events at the shop." },
   ],
 } as const;
+
+/**
+ * Words that rotate in the homepage hero, one pair every 3 seconds. `lead` goes
+ * left of the cup, `item` right of it. Every item is on the real menu. Keep the two
+ * halves a similar length so the pair looks balanced, and each item to about 11
+ * characters or fewer so it fits beside the cup.
+ */
+export const heroWords = [
+  { lead: "Start With", item: "Breakfast" },
+  { lead: "Enjoy A", item: "Hot Coffee" },
+  { lead: "Cool Down", item: "Iced Coffee" },
+  { lead: "Feel Good", item: "Smoothies" },
+  { lead: "Sip", item: "Tea" },
+  { lead: "Grab A", item: "Panini" },
+] as const;

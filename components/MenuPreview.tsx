@@ -14,6 +14,8 @@ type Bit = {
   /** far pieces sit deeper: a touch more smear on ice. Drift is seconds per bob. */
   far?: boolean;
   drift?: number;
+  /** hide on phones so the garnish does not crowd the word and cups */
+  wideOnly?: boolean;
 };
 const BEANS: Bit[] = [
   { layer: "back", cls: "top-0 left-[14%] h-14 w-14 -rotate-12 sm:h-24 sm:w-24" },
@@ -23,12 +25,12 @@ const BEANS: Bit[] = [
   { layer: "front", cls: "top-[54%] right-[30%] h-10 w-10 -rotate-[25deg] sm:h-16 sm:w-16" },
 ];
 const BERRIES: Bit[] = [
-  { layer: "back", cls: "top-[2%] left-[22%] h-11 w-11 rotate-[18deg] sm:h-[4.5rem] sm:w-[4.5rem]" },
+  { layer: "back", wideOnly: true, cls: "top-[2%] left-[22%] h-11 w-11 rotate-[18deg] sm:h-[4.5rem] sm:w-[4.5rem]" },
   { layer: "back", cls: "top-[10%] right-[9%] h-12 w-12 -rotate-[38deg] sm:h-20 sm:w-20" },
   { layer: "back", cls: "top-[52%] left-[5%] h-10 w-10 rotate-[95deg] sm:h-16 sm:w-16" },
   { layer: "back", cls: "top-[46%] right-[5%] h-9 w-9 rotate-[150deg] sm:h-14 sm:w-14" },
   { layer: "front", cls: "top-[34%] left-[24%] h-9 w-9 -rotate-[60deg] sm:h-14 sm:w-14" },
-  { layer: "front", cls: "top-[20%] right-[27%] h-10 w-10 rotate-[115deg] sm:h-[4.25rem] sm:w-[4.25rem]" },
+  { layer: "front", wideOnly: true, cls: "top-[20%] right-[27%] h-10 w-10 rotate-[115deg] sm:h-[4.25rem] sm:w-[4.25rem]" },
 ];
 
 const ICE = "/images/ice-cube.png";
@@ -41,7 +43,7 @@ const ICED: Bit[] = [
   { layer: "back", far: true, drift: 7.5, src: CHOC, cls: "top-[2%] right-[34%] h-7 w-7 -rotate-[70deg] sm:h-[2.6rem] sm:w-[2.6rem]" },
   { layer: "back", far: true, drift: 8, src: ICE, cls: "top-[47%] left-[11%] h-9 w-9 rotate-[100deg] sm:h-[3.6rem] sm:w-[3.6rem]" },
   { layer: "back", far: true, drift: 7, src: CHOC, cls: "top-[54%] right-[10%] h-8 w-8 rotate-[25deg] sm:h-[3.2rem] sm:w-[3.2rem]" },
-  { layer: "back", drift: 6, src: ICE, cls: "top-[11%] right-[12%] h-12 w-12 rotate-[95deg] sm:h-[5.4rem] sm:w-[5.4rem]" },
+  { layer: "back", wideOnly: true, drift: 6, src: ICE, cls: "top-[11%] right-[12%] h-12 w-12 rotate-[95deg] sm:h-[5.4rem] sm:w-[5.4rem]" },
   // in front of the cups: larger and sharp
   { layer: "front", drift: 6.2, src: CHOC, cls: "top-[9%] left-[5%] h-10 w-10 -rotate-[34deg] sm:left-[6%] sm:h-[4.6rem] sm:w-[4.6rem]" },
   { layer: "front", drift: 6.8, src: CHOC, cls: "top-[37%] left-[28%] h-10 w-10 rotate-[115deg] sm:h-[4.6rem] sm:w-[4.6rem]" },
@@ -60,7 +62,7 @@ function Garnish({ bits, src, on, layer }: { bits: Bit[]; src?: string; on: bool
             alt=""
             width={96}
             height={96}
-            className={`pointer-events-none absolute object-contain transition-opacity duration-[1400ms] ease-in-out ${layer === "back" ? "z-20" : "z-40"} ${on ? "opacity-100" : "opacity-0"} ${b.cls}`}
+            className={`pointer-events-none absolute object-contain transition-opacity duration-[1400ms] ease-in-out ${layer === "back" ? "z-20" : "z-40"} ${on ? "opacity-100" : "opacity-0"} ${b.wideOnly ? "hidden sm:block" : ""} ${b.cls}`}
             style={{
               ...((b.src ?? src) === ICE ? { filter: b.far ? "url(#ice-motion-far)" : "url(#ice-motion)" } : {}),
               ...(b.drift ? { animation: `garnish-drift ${b.drift}s ease-in-out ${-i * 1.3}s infinite alternate` } : {}),
@@ -167,14 +169,14 @@ export default function MenuPreview() {
             </div>
 
             <dl className="mt-10 grid gap-8 border-t-2 border-ink/10 pt-8 text-center sm:grid-cols-3 sm:text-left">
-              <div>
+              <div className="hidden sm:block">
                 <dt className="label text-orange-deep">Hot and iced</dt>
                 <dd className="mt-2 text-sm text-ink-soft">
                   Espresso, cold brew, teas and smoothies, with a flavor shot
                   on any coffee.
                 </dd>
               </div>
-              <div>
+              <div className="hidden sm:block">
                 <dt className="label text-orange-deep">Breakfast and lunch</dt>
                 <dd className="mt-2 text-sm text-ink-soft">
                   Waffles, egg sandwiches, paninis and soups, with pastries on

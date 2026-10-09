@@ -8,8 +8,8 @@ export default function CityFeature() {
     <section
       className="relative isolate overflow-hidden bg-fixed bg-cover"
       style={{
-        backgroundImage: "url(/images/feature-interior.webp)",
-        backgroundPosition: "left 30%",
+        backgroundImage: "url(/images/feature-interior-v3.webp)",
+        backgroundPosition: "center 40%",
       }}
     >
       <div className="absolute inset-0 bg-ink/55" />
@@ -29,20 +29,20 @@ export default function CityFeature() {
           <p className="label leading-relaxed">
             Now serving
             <br />
-            whole beans
+            coffee &amp; tea
             <br />
-            ground coffee
+            smoothies
             <br />
-            iced coffee
+            breakfast &amp; lunch
             <br />
-            &amp; bakery
+            soups &amp; pastries
           </p>
           <div className="label mt-6 space-y-2">
-            <a href="#menu" className="flex gap-2">
+            <a href="/menu" className="flex gap-2 py-1">
               <span>&gt;</span>
               <span className="underline underline-offset-4">Explore menu</span>
             </a>
-            <a href="#contact" className="flex gap-2">
+            <a href="/contact" className="flex gap-2 py-1">
               <span>&gt;</span>
               <span className="underline underline-offset-4">
                 Location / hours

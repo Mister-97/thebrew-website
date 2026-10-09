@@ -16,14 +16,7 @@ export default function Signature() {
     <section id="story">
       <div className="bg-cream px-5 py-14 sm:px-10 sm:py-20">
         <div className="reveal mx-auto flex max-w-lg flex-col items-center text-center">
-          <Image
-            src="/images/coffee-bean-photo.png"
-            alt=""
-            width={80}
-            height={80}
-            className="h-8 w-8 object-contain"
-          />
-          <h2 className="font-display mt-2 text-4xl sm:text-5xl">Check out our menu</h2>
+          <h2 className="font-display text-4xl sm:text-5xl">Check out our menu</h2>
         </div>
 
         <ul
